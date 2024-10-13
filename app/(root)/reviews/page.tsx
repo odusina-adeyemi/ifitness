@@ -50,7 +50,7 @@ const Reviews = () => {
           }
     }
 
-    if(user && user?.emailAddresses[0].emailAddress !== process.env.ADMIN) {
+    if(user && user?.emailAddresses[0].emailAddress !== 'dikkorabiat25@gmail.com') {
         router.push('/');
 
         return null;

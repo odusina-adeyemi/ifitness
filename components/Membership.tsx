@@ -111,9 +111,9 @@ const Membership = () => {
                         paystack.newTransaction({
                             key: process.env.NEXT_PUBLIC_PAYSTACK_PUBLIC_KEY, // Paystack public key
                             email: user?.emailAddresses[0]?.emailAddress,
-                            amount: price * 100, // Amount in kobo
+                            amount: price * 100, 
                             onSuccess: async (transaction) => {
-                                // Payment was successful, trigger onSuccess with the selected plan and plan code
+                            
                                 await onSuccess(planCode, planName);
                                 toast.success("Payment successful!");
                             },
